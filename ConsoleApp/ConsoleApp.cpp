@@ -2,52 +2,59 @@
 #include <time.h>
 using namespace std;
 
+//функция, сливающая массивы
+void connect(int* a, int first, int last)
+{
+	int middle, start, final, j;
+	int* mas = new int[1001];
+	middle = (first + last) / 2; //вычисление среднего элемента
+	start = first; //начало левой части
+	final = middle + 1; //начало правой части
+	for (j = first; j <= last; j++) //выполнять от начала до конца
+		if ((start <= middle) && ((final > last) || (a[start] < a[final])))
+		{
+			mas[j] = a[start];
+			start++;
+		}
+		else
+		{
+			mas[j] = a[final];
+			final++;
+		}
+	//возвращение результата в список
+	for (j = first; j <= last; j++) a[j] = mas[j];
+	delete[]mas;
+};
+//рекурсивная процедура сортировки
+void Sort(int* a, int first, int last)
+{
+	{
+		if (first < last)
+		{
+			Sort(a, first, (first + last) / 2); //сортировка левой части
+			Sort(a, (first + last) / 2 + 1, last); //сортировка правой части
+			connect(a, first, last); //слияние двух частей
+		}
+	}
+};
+//главная функция
 int main()
 {
-	setlocale(LC_ALL, "rus");
-	cout << "Введите размер массива: ";
-	int c = 3;    // начальное приращение сортировки
-	int n; // длинна массива
-	cin >> n;
+	setlocale(LC_ALL, "Rus");
+	int i, n;
+	cout << "Размер массива: "; cin >> n;
+	int* a = new int[1001];
 	clock_t start, end;
 	start = clock();
-	int* a = new int[n];
-	for (int i = 0; i < n; i++)
-	{
-		a[i] = rand() % 100;// заполняем массив случайными числами
+	for (int i = 0; i < n; i++) {
+		a[i] = rand() % 101; // заполняем массив случайными числами
 		cout << a[i] << "  "; // вывод массива на экран
 	}
-	cout << "\n";
-	int buff = 0;	// для хранения перемещаемого значения
-	int i, j;		// для циклов		
-
-	/************* Начало сортировки *******************/
-	while (c > 0)  // пока существует приращение
-	{
-		for (int i = 0; i < n; i++)  // для всех элементов массива
-		{
-			int j = i;          // сохраняем индекс и элемент
-			int temp = a[i];
-			// просматриваем остальные элементы массива, отстоящие от j-ого
-			// на величину приращения
-			while ((j >= c) && (a[j - c] > temp))
-			{  // пока отстоящий элемент больше текущего
-				a[j] = a[j - c]; // перемещаем его на текущую позицию
-				j = j - c;       // переходим к следующему отстоящему элементу
-			}
-			a[j] = temp; // на выявленное место помещаем сохранённый элемент
-		}
-		if (c > 1)      // делим приращение на 2
-			c = c / 2;
-		else if (c == 1)   // последний проход завершён,
-			break;  // выходим из цикла
-	}
-	/************* Конец сортировки *******************/
-
-	for (int i = 0; i < n; i++) // вывод отсортированного массива
-		cout << a[i] << "  ";
+	Sort(a, 0, n); //вызов сортирующей процедуры
+	cout << endl; //вывод упорядоченного массива
+	for (i = 1; i <= n; i++) cout << a[i] << "  ";
 	cout << endl;
 	end = clock();
-	printf("Время выполнение программы %.4f (s)\n", ((double)end - start) / ((double)CLOCKS_PER_SEC));
-
+	printf("Время выполнение программы %.4f\n", ((double)end - start) / ((double)CLOCKS_PER_SEC));
+	delete[]a;
 }
