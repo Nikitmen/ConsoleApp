@@ -1,6 +1,9 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=4979FF&vCenter=true&lines=%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5+%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B+%D0%BF%D0%BE+%D1%81%D0%B8%D0%B0%D0%BE%D0%B4)](https://github.com/Nikitmen/ConsoleApp/tree/master/ConsoleApp)
 
-[![Braydon's GitHub Banner](./assets/GitHubHeader.png)](https://braydoncoyer.dev)
+[![Visits Badge](https://badges.pufler.dev/visits/braydoncoyer/braydoncoyer)](https:braydoncoyer.dev)
+[![Twitter Badge](https://img.shields.io/badge/Twitter-Profile-informational?style=flat&logo=twitter&logoColor=white&color=1CA2F1)](https://twitter.com/BraydonCoyer)
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-Profile-informational?style=flat&logo=linkedin&logoColor=white&color=0D76A8)](https://www.linkedin.com/in/braydon-coyer/)
+[![CodePen Badge](https://img.shields.io/badge/CodePen-Profile-informational?style=flat
 
 Практическая работа № 1 ✅
 
