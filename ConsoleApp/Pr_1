@@ -1,0 +1,40 @@
+#include <iostream>
+#include <time.h>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	cout << "Ââåäèòå ðàçìåð ìàññèâà: ";
+	int n; // äëèííà ìàññèâà
+	cin >> n;
+	clock_t start, end;
+	start = clock();
+	int* a = new int[n];
+	for (int i = 0; i < n; i++)
+	{
+		a[i] = rand() % 100; // çàïîëíÿåì ìàññèâ ñëó÷àéíûìè ÷èñëàìè
+		cout << a[i] << "  "; // âûâîä ìàññèâà íà ýêðàí
+	}
+	cout << "\n";
+	int buff = 0;	// äëÿ õðàíåíèÿ ïåðåìåùàåìîãî çíà÷åíèÿ
+	int i, j;		// äëÿ öèêëîâ		
+
+	/************* Íà÷àëî ñîðòèðîâêè *******************/
+	for (i = 1; i < n; i++)
+	{
+		buff = a[i];
+		for (j = i - 1; j >= 0 && a[j] > buff; j--)
+			a[j + 1] = a[j];
+
+		a[j + 1] = buff;
+	}
+	/************* Êîíåö ñîðòèðîâêè *******************/
+
+	for (int i = 0; i < n; i++) // âûâîä îòñîðòèðîâàííîãî ìàññèâà
+		cout << a[i] << "  ";
+	cout << endl;
+	end = clock();
+	printf("Âðåìÿ âûïîëíåíèå ïðîãðàììû %.4f(s)\n", ((double)end - start) / ((double)CLOCKS_PER_SEC));
+
+}
