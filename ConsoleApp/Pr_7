@@ -26,7 +26,7 @@ TList* Find(TList* list, int value)
     return list;
 }
 //-----------------------------------------------------------------------------
-void Print(TList* list)//Вывод списков
+void Print(TList* list)//Г‚Г»ГўГ®Г¤ Г±ГЇГЁГ±ГЄГ®Гў
 {
     for (; list; list = list->next)
     {
@@ -35,12 +35,12 @@ void Print(TList* list)//Вывод списков
     printf("\n");
 }
 //-----------------------------------------------------------------------------
-int Random(int min, int max)//Рандом заполнение
+int Random(int min, int max)//ГђГ Г­Г¤Г®Г¬ Г§Г ГЇГ®Г«Г­ГҐГ­ГЁГҐ
 {
     return (rand() % (max - min) + min);
 }
 //-----------------------------------------------------------------------------
-TList* GetGenList(size_t count, int min, int max)//Создание списков
+TList* GetGenList(size_t count, int min, int max)//Г‘Г®Г§Г¤Г Г­ГЁГҐ Г±ГЇГЁГ±ГЄГ®Гў
 {
     TList* list = NULL;
 
@@ -52,7 +52,7 @@ TList* GetGenList(size_t count, int min, int max)//Создание списков
     return list;
 }
 //-----------------------------------------------------------------------------
-TList* GetUniqueFirst(TList* first, TList* second)//Создание единого списка
+TList* GetUniqueFirst(TList* first, TList* second)//Г‘Г®Г§Г¤Г Г­ГЁГҐ ГҐГ¤ГЁГ­Г®ГЈГ® Г±ГЇГЁГ±ГЄГ 
 {
     TList* list = NULL;
 
@@ -71,11 +71,11 @@ TList* GetUniqueFirst(TList* first, TList* second)//Создание единого списка
 int main()
 {
     srand(time(NULL));
-    TList* l1 = GetGenList(10, 3, 10);//Создание списков состоящих из 10 чисел разного дипозона 
+    TList* l1 = GetGenList(10, 3, 10);//Г‘Г®Г§Г¤Г Г­ГЁГҐ Г±ГЇГЁГ±ГЄГ®Гў Г±Г®Г±ГІГ®ГїГ№ГЁГµ ГЁГ§ 10 Г·ГЁГ±ГҐГ« Г°Г Г§Г­Г®ГЈГ® Г¤ГЁГЇГ®Г§Г®Г­Г  
     TList* l2 = GetGenList(10, 0, 7);
     TList* l = GetUniqueFirst(l1, l2);
 
-    printf("L1: "); Print(l1);//Вывод списков
+    printf("L1: "); Print(l1);//Г‚Г»ГўГ®Г¤ Г±ГЇГЁГ±ГЄГ®Гў
     printf("L2: "); Print(l2);
     printf("L : "); Print(l);
 
