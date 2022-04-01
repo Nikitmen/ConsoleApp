@@ -18,5 +18,5 @@
 
 Вариант:1(Простой вставки (Insertion sort))
 
-Файл: Pr_2.cpp(https://github.com/Nikitmen/ConsoleApp/tree/master/ConsoleApp)
+Файл: [Pr_2.cpp(https://github.com/Nikitmen/ConsoleApp/tree/master/ConsoleApp)]
 
