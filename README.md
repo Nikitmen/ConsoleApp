@@ -8,7 +8,7 @@
 
 Вариант:1(Простой вставки (Insertion sort))
 
-Файл: Pr_1.cpp
+Файл: [Pr_1](https://github.com/Nikitmen/ConsoleApp/blob/master/ConsoleApp/Pr_1)
 
 Практическая работа № 2 ✅
 
