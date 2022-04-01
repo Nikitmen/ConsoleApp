@@ -18,5 +18,5 @@
 
 Вариант:1(Простой вставки (Insertion sort))
 
-Файл: [![Typing SVG](https://github.com/Nikitmen/ConsoleApp/tree/master/ConsoleApp)
+Файл: [![Typing SVG](Pr_2)(https://github.com/Nikitmen/ConsoleApp/tree/master/ConsoleApp)
 
