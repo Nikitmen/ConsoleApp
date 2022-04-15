@@ -36,8 +36,7 @@ void printCodes(struct MinHeapNode* root, string str){
     printCodes(root->right, str + "1");
 }
 // утилита для хранения символов вместе с
-// есть значение Хаффмана в хеш-таблице, здесь мы
-// есть C ++ STL map
+// есть значение Хаффмана в хеш-таблице
 void storeCodes(struct MinHeapNode* root, string str){
     if (root == NULL)
         return;
