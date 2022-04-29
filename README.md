@@ -194,5 +194,3 @@
 
 Файл: [Pr_16](https://github.com/Nikitmen/ConsoleApp/tree/master/ConsoleApp)\
 
-Все работы сданы! 
-![hippo]https://c.tenor.com/mAJMFA1Gjj0AAAAd/baby-yoda-baby-yoda-dancing.gif)
