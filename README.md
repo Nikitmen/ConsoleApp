@@ -192,5 +192,5 @@
 
 Вариант: 5
 
-Файл: [Pr_16](https://github.com/Nikitmen/ConsoleApp/tree/master/ConsoleApp)\
+Файл: [Pr_16](https://github.com/Nikitmen/ConsoleApp/tree/master/ConsoleApp)
 
